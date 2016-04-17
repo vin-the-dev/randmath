@@ -1,0 +1,6 @@
+framework module Pods_randmath {
+  umbrella header "Pods-randmath-umbrella.h"
+
+  export *
+  module * { export * }
+}
