@@ -1,8 +1,8 @@
 EMBEDDED_CONTENT_CONTAINS_SWIFT = YES
+FRAMEWORK_SEARCH_PATHS = $(inherited) "$CONFIGURATION_BUILD_DIR/EZSwiftExtensions" "$CONFIGURATION_BUILD_DIR/SQLite.swift" "$CONFIGURATION_BUILD_DIR/SwiftFilePath" "$CONFIGURATION_BUILD_DIR/SwiftRandom"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-OTHER_CFLAGS = $(inherited) -iquote "$CONFIGURATION_BUILD_DIR/EZSwiftExtensions.framework/Headers"
-OTHER_LDFLAGS = $(inherited) -framework "EZSwiftExtensions"
+OTHER_CFLAGS = $(inherited) -iquote "$CONFIGURATION_BUILD_DIR/EZSwiftExtensions/EZSwiftExtensions.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/SQLite.swift/SQLite.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/SwiftFilePath/SwiftFilePath.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/SwiftRandom/SwiftRandom.framework/Headers"
+OTHER_LDFLAGS = $(inherited) -framework "EZSwiftExtensions" -framework "SQLite" -framework "SwiftFilePath" -framework "SwiftRandom"
 OTHER_SWIFT_FLAGS = $(inherited) "-D" "COCOAPODS"
-PODS_FRAMEWORK_BUILD_PATH = $(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Pods-randmath
 PODS_ROOT = ${SRCROOT}/Pods

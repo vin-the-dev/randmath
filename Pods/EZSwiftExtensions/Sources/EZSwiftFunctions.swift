@@ -1,5 +1,5 @@
 //
-//  EZSwiftExtensions.swift
+//  EZSwiftFunctions.swift
 //  EZSwiftExtensions
 //
 //  Created by Goktug Yilmaz on 13/07/15.
@@ -10,27 +10,76 @@ import UIKit
 //TODO: others standart video, gif
 
 public struct ez {
-
     /// EZSE: Returns app's name
-    public static var appDisplayName: String {
-        return NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleDisplayName") as? String
-            ?? NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleName") as! String
+    public static var appDisplayName: String? {
+        if let bundleDisplayName = NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleDisplayName") as? String {
+            return bundleDisplayName
+        } else if let bundleName = NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleName") as? String {
+            return bundleName
+        }
+
+        return nil
     }
 
     /// EZSE: Returns app's version number
-    public static var appVersion: String {
-        return NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleShortVersionString") as! String
+    public static var appVersion: String? {
+        return NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleShortVersionString") as? String
     }
 
     /// EZSE: Return app's build number
-    public static var appBuild: String {
-        return NSBundle.mainBundle().objectForInfoDictionaryKey(kCFBundleVersionKey as String) as! String
+    public static var appBuild: String? {
+        return NSBundle.mainBundle().objectForInfoDictionaryKey(kCFBundleVersionKey as String) as? String
     }
 
     /// EZSE: Returns both app's version and build numbers "v0.3(7)"
     public static var appVersionAndBuild: String {
         let version = appVersion, build = appBuild
         return version == build ? "v\(version)" : "v\(version)(\(build))"
+    }
+
+    /// EZSE: Return device version ""
+    public static var deviceVersion: String {
+        var size: Int = 0
+        sysctlbyname("hw.machine", nil, &size, nil, 0)
+        var machine = [CChar](count: Int(size), repeatedValue: 0)
+        sysctlbyname("hw.machine", &machine, &size, nil, 0)
+        return String.fromCString(machine)!
+    }
+
+    /// EZSE: Returns true if DEBUG mode is active //TODO: Add to readme
+    public static var isDebug: Bool {
+    #if DEBUG
+        return true
+    #else
+        return false
+    #endif
+    }
+
+    /// EZSE: Returns true if RELEASE mode is active //TODO: Add to readme
+    public static var isRelease: Bool {
+    #if DEBUG
+        return false
+    #else
+        return true
+    #endif
+    }
+
+    /// EZSE: Returns true if its simulator and not a device //TODO: Add to readme
+    public static var isSimulator: Bool {
+    #if (arch(i386) || arch(x86_64)) && os(iOS)
+        return true
+    #else
+        return false
+    #endif
+    }
+
+    /// EZSE: Returns true if its on a device and not a simulator //TODO: Add to readme
+    public static var isDevice: Bool {
+    #if (arch(i386) || arch(x86_64)) && os(iOS)
+        return false
+    #else
+        return true
+    #endif
     }
 
     /// EZSE: Returns the top ViewController
@@ -49,6 +98,16 @@ public struct ez {
     /// EZSE: Returns current screen orientation
     public static var screenOrientation: UIInterfaceOrientation {
         return UIApplication.sharedApplication().statusBarOrientation
+    }
+
+    /// EZSwiftExtensions
+    public static var horizontalSizeClass: UIUserInterfaceSizeClass {
+        return self.topMostVC?.traitCollection.horizontalSizeClass ?? UIUserInterfaceSizeClass.Unspecified
+    }
+
+    /// EZSwiftExtensions
+    public static var verticalSizeClass: UIUserInterfaceSizeClass {
+        return self.topMostVC?.traitCollection.verticalSizeClass ?? UIUserInterfaceSizeClass.Unspecified
     }
 
     /// EZSE: Returns screen width
@@ -81,6 +140,11 @@ public struct ez {
         } else {
             return UIScreen.mainScreen().bounds.size.width - screenStatusBarHeight
         }
+    }
+
+    /// EZSE: Returns the locale country code. An example value might be "ES". //TODO: Add to readme
+    public static var currentRegion: String? {
+        return NSLocale.currentLocale().objectForKey(NSLocaleCountryCode) as? String
     }
 
     /// EZSE: Calls action when a screen shot is taken
@@ -116,10 +180,10 @@ public struct ez {
     public static func runThisInBackground(block: () -> ()) {
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), block)
     }
-    
+
     /// EZSE: Runs every second, to cancel use: timer.invalidate()
-    public static func runThisEvery(seconds seconds: NSTimeInterval, handler: NSTimer! -> Void) -> NSTimer {
-        let fireDate = CFAbsoluteTimeGetCurrent()
+    public static func runThisEvery(seconds seconds: NSTimeInterval, startAfterSeconds: NSTimeInterval, handler: NSTimer! -> Void) -> NSTimer {
+        let fireDate = startAfterSeconds + CFAbsoluteTimeGetCurrent()
         let timer = CFRunLoopTimerCreateWithHandler(kCFAllocatorDefault, fireDate, seconds, 0, 0, handler)
         CFRunLoopAddTimer(CFRunLoopGetCurrent(), timer, kCFRunLoopCommonModes)
         return timer
@@ -139,11 +203,11 @@ public struct ez {
     /// EZSE: Downloads JSON from url string
     public static func requestJSON(url: String, success: (AnyObject? -> Void), error: ((NSError) -> Void)?) {
         requestURL(url,
-            success: { (data)->Void in
+            success: { (data) -> Void in
                 let json: AnyObject? = self.dataToJsonDict(data)
                 success(json)
             },
-            error: { (err)->Void in
+            error: { (err) -> Void in
                 if let e = error {
                     e(err)
                 }
@@ -174,23 +238,15 @@ public struct ez {
         }
     }
 
-    /// EZSE: 
+    /// EZSE:
     private static func requestURL(url: String, success: (NSData?) -> Void, error: ((NSError) -> Void)? = nil) {
-        guard #available(iOS 9, *) else {
-            NSURLConnection.sendAsynchronousRequest(
-                NSURLRequest(URL: NSURL (string: url)!),
-                queue: NSOperationQueue.mainQueue(),
-                completionHandler: { response, data, err in
-                    if let e = err {
-                        error?(e)
-                    } else {
-                        success(data)
-                    }
-            })
+        guard let requestURL = NSURL(string: url) else {
+            assertionFailure("EZSwiftExtensions Error: Invalid URL")
             return
         }
+
         NSURLSession.sharedSession().dataTaskWithRequest(
-            NSURLRequest(URL: NSURL (string: url)!),
+            NSURLRequest(URL: requestURL),
             completionHandler: { data, response, err in
                 if let e = err {
                     error?(e)
@@ -199,5 +255,4 @@ public struct ez {
                 }
         }).resume()
     }
-
 }

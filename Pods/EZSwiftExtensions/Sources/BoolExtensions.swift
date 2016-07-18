@@ -1,5 +1,5 @@
 //
-//  BoolExtentions.swift
+//  BoolExtensions.swift
 //  EZSwiftExtensions
 //
 //  Created by Goktug Yilmaz on 16/07/15.
@@ -7,15 +7,12 @@
 //
 
 extension Bool {
-    
+    /// EZSE: Converts Bool to Int.
+    public var toInt: Int { return Int(self) }
+
     /// EZSE: Toggle boolean value.
     public mutating func toggle() -> Bool {
         self = !self
         return self
     }
-    
 }
-
-
-
-

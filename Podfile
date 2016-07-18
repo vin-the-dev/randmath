@@ -4,7 +4,10 @@ platform :ios, '9.0'
 use_frameworks!
 
 target 'randmath' do
-pod 'EZSwiftExtensions', :git => 'https://github.com/goktugyil/EZSwiftExtensions.git', :tag => '1.2'
+pod 'EZSwiftExtensions'
+pod 'SQLite.swift', '~> 0.10.1'
+pod 'SwiftRandom'
+pod 'SwiftFilePath'
 end
 
 target 'randmathTests' do

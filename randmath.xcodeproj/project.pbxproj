@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		11278EE5F4E9A8DC8B7A753D /* Pods_randmath.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 343C311A0C9B3864B066528C /* Pods_randmath.framework */; };
 		365826A11CC2046D0007D1DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365826A01CC2046D0007D1DB /* AppDelegate.swift */; };
 		365826A31CC2046D0007D1DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365826A21CC2046D0007D1DB /* ViewController.swift */; };
 		365826A61CC2046D0007D1DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 365826A41CC2046D0007D1DB /* Main.storyboard */; };
@@ -15,9 +14,14 @@
 		365826AB1CC2046D0007D1DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 365826A91CC2046D0007D1DB /* LaunchScreen.storyboard */; };
 		365826B61CC2046D0007D1DB /* randmathTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365826B51CC2046D0007D1DB /* randmathTests.swift */; };
 		365826C11CC2046D0007D1DB /* randmathUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365826C01CC2046D0007D1DB /* randmathUITests.swift */; };
-		36C41F1B1CC20DED000D71C7 /* RockSalt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 36C41F1A1CC20DBC000D71C7 /* RockSalt.ttf */; };
+		369DD6571CCEAD490020C88B /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369DD6561CCEAD490020C88B /* DataManager.swift */; };
 		36C41F1D1CC22334000D71C7 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C41F1C1CC22334000D71C7 /* SnapshotHelper.swift */; };
 		36C41F1F1CC22C1B000D71C7 /* CommonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C41F1E1CC22C1B000D71C7 /* CommonExtension.swift */; };
+		36E59F651CCB956800897223 /* RockSalt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 36E59F641CCB956800897223 /* RockSalt.ttf */; };
+		36E59F671CCB962E00897223 /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E59F661CCB962E00897223 /* Analytics.swift */; };
+		A6680C303DCEFE21BADB3C95 /* Pods_randmathTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E2BE729E8450E7FF978DD7A /* Pods_randmathTests.framework */; };
+		C377F2BCDBD9F1D698666065 /* Pods_randmath.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E27CB2566067C033C017C0C /* Pods_randmath.framework */; };
+		F9CD5CC62227D7E0DFD2555C /* Pods_randmathUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C55895041A94BBE601A8F0E /* Pods_randmathUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3049B0FC25A48A12D3AD7890 /* Pods-randmath.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-randmath.debug.xcconfig"; path = "Pods/Target Support Files/Pods-randmath/Pods-randmath.debug.xcconfig"; sourceTree = "<group>"; };
-		343C311A0C9B3864B066528C /* Pods_randmath.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_randmath.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D559CF9DC551E4E4D1F0224 /* Pods-randmath.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-randmath.debug.xcconfig"; path = "Pods/Target Support Files/Pods-randmath/Pods-randmath.debug.xcconfig"; sourceTree = "<group>"; };
 		3658269D1CC2046C0007D1DB /* randmath.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = randmath.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		365826A01CC2046D0007D1DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		365826A21CC2046D0007D1DB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -53,10 +56,19 @@
 		365826BC1CC2046D0007D1DB /* randmathUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = randmathUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		365826C01CC2046D0007D1DB /* randmathUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = randmathUITests.swift; sourceTree = "<group>"; };
 		365826C21CC2046D0007D1DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		36C41F1A1CC20DBC000D71C7 /* RockSalt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = RockSalt.ttf; sourceTree = "<group>"; };
+		369DD6561CCEAD490020C88B /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataManager.swift; path = CommonObjects/DataManager.swift; sourceTree = "<group>"; };
 		36C41F1C1CC22334000D71C7 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = "<group>"; };
 		36C41F1E1CC22C1B000D71C7 /* CommonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonExtension.swift; sourceTree = "<group>"; };
-		A51D5BACE63ED6EBC845DA01 /* Pods-randmath.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-randmath.release.xcconfig"; path = "Pods/Target Support Files/Pods-randmath/Pods-randmath.release.xcconfig"; sourceTree = "<group>"; };
+		36E59F641CCB956800897223 /* RockSalt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = RockSalt.ttf; path = Resources/Font/RockSalt.ttf; sourceTree = "<group>"; };
+		36E59F661CCB962E00897223 /* Analytics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Analytics.swift; path = Model/Analytics.swift; sourceTree = "<group>"; };
+		3CB4C45D953B167BC19118EF /* Pods-randmathTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-randmathTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-randmathTests/Pods-randmathTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4C55895041A94BBE601A8F0E /* Pods_randmathUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_randmathUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E27CB2566067C033C017C0C /* Pods_randmath.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_randmath.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E2BE729E8450E7FF978DD7A /* Pods_randmathTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_randmathTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		61E16BAEDD55ED0FC03AFCE4 /* Pods-randmathUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-randmathUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-randmathUITests/Pods-randmathUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A5DCEEF682F27686D9961AA3 /* Pods-randmath.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-randmath.release.xcconfig"; path = "Pods/Target Support Files/Pods-randmath/Pods-randmath.release.xcconfig"; sourceTree = "<group>"; };
+		C0545B590DB586933246FA10 /* Pods-randmathTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-randmathTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-randmathTests/Pods-randmathTests.release.xcconfig"; sourceTree = "<group>"; };
+		CCF017B901779C02EA1BB140 /* Pods-randmathUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-randmathUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-randmathUITests/Pods-randmathUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11278EE5F4E9A8DC8B7A753D /* Pods_randmath.framework in Frameworks */,
+				C377F2BCDBD9F1D698666065 /* Pods_randmath.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6680C303DCEFE21BADB3C95 /* Pods_randmathTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,18 +92,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9CD5CC62227D7E0DFD2555C /* Pods_randmathUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1D770F1DE5D0F15D9AC25F54 /* Frameworks */ = {
+		2F9DFE5B830292499AD6EFBB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				343C311A0C9B3864B066528C /* Pods_randmath.framework */,
+				0D559CF9DC551E4E4D1F0224 /* Pods-randmath.debug.xcconfig */,
+				A5DCEEF682F27686D9961AA3 /* Pods-randmath.release.xcconfig */,
+				3CB4C45D953B167BC19118EF /* Pods-randmathTests.debug.xcconfig */,
+				C0545B590DB586933246FA10 /* Pods-randmathTests.release.xcconfig */,
+				61E16BAEDD55ED0FC03AFCE4 /* Pods-randmathUITests.debug.xcconfig */,
+				CCF017B901779C02EA1BB140 /* Pods-randmathUITests.release.xcconfig */,
 			);
-			name = Frameworks;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		365826941CC2046C0007D1DB = {
@@ -100,8 +119,8 @@
 				365826B41CC2046D0007D1DB /* randmathTests */,
 				365826BF1CC2046D0007D1DB /* randmathUITests */,
 				3658269E1CC2046C0007D1DB /* Products */,
-				4EF5FFAFB59874F89F012187 /* Pods */,
-				1D770F1DE5D0F15D9AC25F54 /* Frameworks */,
+				2F9DFE5B830292499AD6EFBB /* Pods */,
+				AF75A36A5B9B7FF2D818CF93 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -118,6 +137,9 @@
 		3658269F1CC2046C0007D1DB /* randmath */ = {
 			isa = PBXGroup;
 			children = (
+				36DA43DD1CFB23B500F738DC /* Classes */,
+				369DD6551CCEAB750020C88B /* CommonObjects */,
+				36E59F631CCB94D500897223 /* Model */,
 				36C41F181CC20D89000D71C7 /* Resources */,
 				365826A01CC2046D0007D1DB /* AppDelegate.swift */,
 				365826A21CC2046D0007D1DB /* ViewController.swift */,
@@ -149,6 +171,14 @@
 			path = randmathUITests;
 			sourceTree = "<group>";
 		};
+		369DD6551CCEAB750020C88B /* CommonObjects */ = {
+			isa = PBXGroup;
+			children = (
+				369DD6561CCEAD490020C88B /* DataManager.swift */,
+			);
+			name = CommonObjects;
+			sourceTree = "<group>";
+		};
 		36C41F181CC20D89000D71C7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,18 +190,34 @@
 		36C41F191CC20D9C000D71C7 /* Font */ = {
 			isa = PBXGroup;
 			children = (
-				36C41F1A1CC20DBC000D71C7 /* RockSalt.ttf */,
+				36E59F641CCB956800897223 /* RockSalt.ttf */,
 			);
 			name = Font;
 			sourceTree = "<group>";
 		};
-		4EF5FFAFB59874F89F012187 /* Pods */ = {
+		36DA43DD1CFB23B500F738DC /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				3049B0FC25A48A12D3AD7890 /* Pods-randmath.debug.xcconfig */,
-				A51D5BACE63ED6EBC845DA01 /* Pods-randmath.release.xcconfig */,
 			);
-			name = Pods;
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		36E59F631CCB94D500897223 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				36E59F661CCB962E00897223 /* Analytics.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		AF75A36A5B9B7FF2D818CF93 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4E27CB2566067C033C017C0C /* Pods_randmath.framework */,
+				4E2BE729E8450E7FF978DD7A /* Pods_randmathTests.framework */,
+				4C55895041A94BBE601A8F0E /* Pods_randmathUITests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,12 +227,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 365826C51CC2046D0007D1DB /* Build configuration list for PBXNativeTarget "randmath" */;
 			buildPhases = (
-				A306D183F7770302E6CC85C8 /* Check Pods Manifest.lock */,
+				0606A9E1A3B6FDF12D21A769 /* 📦 Check Pods Manifest.lock */,
 				365826991CC2046C0007D1DB /* Sources */,
 				3658269A1CC2046C0007D1DB /* Frameworks */,
 				3658269B1CC2046C0007D1DB /* Resources */,
-				BAA38C85E00374EAAD95444B /* Embed Pods Frameworks */,
-				A106BFCAD4FDEAA15E2349E2 /* Copy Pods Resources */,
+				FF4ACD8045851A53B66468EF /* 📦 Embed Pods Frameworks */,
+				6259B6F150DB1865AAE6BFF4 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -201,9 +247,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 365826C81CC2046D0007D1DB /* Build configuration list for PBXNativeTarget "randmathTests" */;
 			buildPhases = (
+				68BF0118266A94D49D478C61 /* 📦 Check Pods Manifest.lock */,
 				365826AD1CC2046D0007D1DB /* Sources */,
 				365826AE1CC2046D0007D1DB /* Frameworks */,
 				365826AF1CC2046D0007D1DB /* Resources */,
+				310C9F6992E0CA95B5468CF0 /* 📦 Embed Pods Frameworks */,
+				CEB085F1E7054B4A35CC22AF /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -219,9 +268,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 365826CB1CC2046D0007D1DB /* Build configuration list for PBXNativeTarget "randmathUITests" */;
 			buildPhases = (
+				AFBEC62EE76A71E119A73F03 /* 📦 Check Pods Manifest.lock */,
 				365826B81CC2046D0007D1DB /* Sources */,
 				365826B91CC2046D0007D1DB /* Frameworks */,
 				365826BA1CC2046D0007D1DB /* Resources */,
+				CDE48EABC697EB326CC32CB6 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -287,7 +338,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				36C41F1B1CC20DED000D71C7 /* RockSalt.ttf in Resources */,
+				36E59F651CCB956800897223 /* RockSalt.ttf in Resources */,
 				365826AB1CC2046D0007D1DB /* LaunchScreen.storyboard in Resources */,
 				365826A81CC2046D0007D1DB /* Assets.xcassets in Resources */,
 				365826A61CC2046D0007D1DB /* Main.storyboard in Resources */,
@@ -311,29 +362,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		A106BFCAD4FDEAA15E2349E2 /* Copy Pods Resources */ = {
+		0606A9E1A3B6FDF12D21A769 /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-randmath/Pods-randmath-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A306D183F7770302E6CC85C8 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
+			name = "📦 Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -341,14 +377,104 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		BAA38C85E00374EAAD95444B /* Embed Pods Frameworks */ = {
+		310C9F6992E0CA95B5468CF0 /* 📦 Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-randmathTests/Pods-randmathTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6259B6F150DB1865AAE6BFF4 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-randmath/Pods-randmath-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		68BF0118266A94D49D478C61 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AFBEC62EE76A71E119A73F03 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CDE48EABC697EB326CC32CB6 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-randmathUITests/Pods-randmathUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CEB085F1E7054B4A35CC22AF /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-randmathTests/Pods-randmathTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF4ACD8045851A53B66468EF /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -364,7 +490,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				365826A31CC2046D0007D1DB /* ViewController.swift in Sources */,
+				369DD6571CCEAD490020C88B /* DataManager.swift in Sources */,
 				36C41F1F1CC22C1B000D71C7 /* CommonExtension.swift in Sources */,
+				36E59F671CCB962E00897223 /* Analytics.swift in Sources */,
 				365826A11CC2046D0007D1DB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -504,7 +632,7 @@
 		};
 		365826C61CC2046D0007D1DB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3049B0FC25A48A12D3AD7890 /* Pods-randmath.debug.xcconfig */;
+			baseConfigurationReference = 0D559CF9DC551E4E4D1F0224 /* Pods-randmath.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -518,7 +646,7 @@
 		};
 		365826C71CC2046D0007D1DB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A51D5BACE63ED6EBC845DA01 /* Pods-randmath.release.xcconfig */;
+			baseConfigurationReference = A5DCEEF682F27686D9961AA3 /* Pods-randmath.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -532,6 +660,7 @@
 		};
 		365826C91CC2046D0007D1DB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3CB4C45D953B167BC19118EF /* Pods-randmathTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = randmathTests/Info.plist;
@@ -544,6 +673,7 @@
 		};
 		365826CA1CC2046D0007D1DB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0545B590DB586933246FA10 /* Pods-randmathTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = randmathTests/Info.plist;
@@ -556,6 +686,7 @@
 		};
 		365826CC1CC2046D0007D1DB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61E16BAEDD55ED0FC03AFCE4 /* Pods-randmathUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = randmathUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -568,6 +699,7 @@
 		};
 		365826CD1CC2046D0007D1DB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CCF017B901779C02EA1BB140 /* Pods-randmathUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = randmathUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

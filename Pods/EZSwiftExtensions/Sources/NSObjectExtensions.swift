@@ -1,5 +1,5 @@
 //
-//  NSObjectExtentions.swift
+//  NSObjectExtensions.swift
 //  EZSwiftExtensions
 //
 //  Created by Goktug Yilmaz on 16/07/15.
@@ -8,17 +8,11 @@
 import UIKit
 
 extension NSObject {
-    
     public var className: String {
         return self.dynamicType.className
     }
-    
+
     public static var className: String {
-        return stringFromClass(self)
+        return String(self)
     }
-
-}
-
-public func stringFromClass(aClass: AnyClass) -> String {
-    return NSStringFromClass(aClass).componentsSeparatedByString(".").last!
 }

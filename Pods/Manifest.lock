@@ -1,21 +1,21 @@
 PODS:
-  - EZSwiftExtensions (1.2)
+  - EZSwiftExtensions (1.3)
+  - SQLite.swift (0.10.1)
+  - SwiftFilePath (0.0.6)
+  - SwiftRandom (0.1.7)
 
 DEPENDENCIES:
-  - EZSwiftExtensions (from `https://github.com/goktugyil/EZSwiftExtensions.git`,
-    tag `1.2`)
-
-EXTERNAL SOURCES:
-  EZSwiftExtensions:
-    :git: https://github.com/goktugyil/EZSwiftExtensions.git
-    :tag: '1.2'
-
-CHECKOUT OPTIONS:
-  EZSwiftExtensions:
-    :git: https://github.com/goktugyil/EZSwiftExtensions.git
-    :tag: '1.2'
+  - EZSwiftExtensions
+  - SQLite.swift (~> 0.10.1)
+  - SwiftFilePath
+  - SwiftRandom
 
 SPEC CHECKSUMS:
-  EZSwiftExtensions: bca85cfa0448c0c0213d97b02ddcf99d5f0ca1c9
+  EZSwiftExtensions: b56167bb6be6fbb9d1926a21413baeee2a9afe01
+  SQLite.swift: 6a6e4b034efc317ce4e203b6af2d3024fee2b570
+  SwiftFilePath: 52c1db61018e0a3941191eb71002cb5cbdaa39e7
+  SwiftRandom: a03b68cbcda1b03d0fef5a1b87296f9500b6eac3
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: 9d5960e9d1143809dcec8469c49b65a967f643b0
+
+COCOAPODS: 1.0.0.beta.8

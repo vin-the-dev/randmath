@@ -2,6 +2,10 @@
 
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/EZSwiftExtensions.svg)](https://img.shields.io/cocoapods/v/EZSwiftExtensions.svg)  
+[![License](https://img.shields.io/cocoapods/l/EZSwiftExtensions.svg?style=flat)](http://cocoapods.org/pods/EZSwiftExtensions)
+[![Platform](https://img.shields.io/cocoapods/p/EZSwiftExtensions.svg?style=flat)](http://cocoapods.org/pods/EZSwiftExtensions)
+[![Language](https://img.shields.io/badge/swift-2.1-orange.svg)](http://swift.org)
+
 <img src="charizard.png" width="200">
 
 How Swift standard types and classes were supposed to work. A collection of useful extensions for the Swift Standard Library, Foundation, and UIKit.
@@ -14,9 +18,11 @@ How Swift standard types and classes were supposed to work. A collection of usef
 - [Int](#int-extensions)
 - [Double](#double-extensions)
 - [String](#string-extensions)
+- [NSAttributedString](#nsattributedstring-extensions)
 - [Array](#array-extensions)
 - [Dictionary](#dictionary-extensions)
 - [NSDate](#nsdate-extensions)
+- [NSTimer](#nstimer-extensions)
 - [CGRect](#cgrect-extensions)
 - [UIViewController](#uiviewcontroller-extensions)
 - [UIView](#uiview-extensions)
@@ -57,12 +63,20 @@ if UIInterfaceOrientationIsPortrait(ez.screenOrientation) {
 }
 ```
 
-Easily access your screen width & height:
+Easily access your screen traitCollections:
+
+``` swift
+print(ez.verticalSizeClass) // regular on iPhone6
+print(ez.horizontalSizeClass) // compact  on iPhone6
+```
+
+Easily access your screen traitCollections:
 
 ``` swift
 print(ez.screenWidth) // 375.0 on iPhone6
 print(ez.screenHeight) // 667.0 on iPhone6
 ```
+
 Easily access your status bar height:
 
 ``` swift
@@ -263,6 +277,36 @@ let str = "yes yes yes yesyesyes"
 print(str.count("yes")) // 6
 ```
 
+##NSAttributedString Extensions
+Easily change the typeface:
+
+``` swift
+var str = NSAttributedString(string: "Hello")
+let attrStr1 = str.underline()
+let attrStr2 = str.bold()
+let attrStr3 = str.italic()
+```
+
+Easily change the color:
+
+``` swift
+var str = NSAttributedString(string: "Hello")
+str.color(UIColor.blueColor())
+```
+
+Easily use multiple options:
+``` swift
+var str = NSAttributedString(string: "Hello")
+str.bold().underline().color(UIColor.blueColor())
+```
+
+Easily add NSAttributedStrings:
+``` swift
+var str = NSAttributedString(string: "Hello")
+var str2 = NSAttributedString(string: " World")
+str += str2 //Hello World
+```
+
 ##Array Extensions
 Easily access a random element:
 
@@ -270,11 +314,11 @@ Easily access a random element:
 var myArray = ["charmander","bulbasaur","squirtle"]
 print(myArray.random()) // bulbasaur or something else
 ```
-Easily find the index of an object:
+Easily find the indexes of an object:
 
 ``` swift
-var myArray = ["charmander","bulbasaur","squirtle"]
-print(myArray.indexOfObject("charmander")) // 0
+var myArray = ["charmander","bulbasaur","squirtle","charmander"]
+print(myArray.indexesOf("charmander")) // [0,3]
 ```
 Easily remove an object:
 
@@ -306,7 +350,7 @@ Easily access a random element:
 
 ``` swift
 var myDict = ["charmander": "fire","bulbasaur": "grass","squirtle": "water"]
-print(myDict()) // grass or something else
+print(myDict.random()) // grass or something else
 ```
 
 Easily add dictionaries to create new ones:
@@ -454,6 +498,15 @@ override func viewDidAppear(animated: Bool) {
     dismissVC(completion: nil) // Instead of dismissViewControllerAnimated(true, completion: completion)}
 ```
 
+Easily hide the keyboard when user taps around the UIViewController:
+
+```swift 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
+    }
+```
+
 Easily add UIViewControllers:
 
 ``` swift
@@ -580,6 +633,13 @@ mainview.addSubview(cview)
 print(mainview.subviews) // 3 subviews
 mainview.removeSubviews()
 print(mainview.subviews) // []
+```
+Easily center view in superview:
+
+``` swift
+myView.centerXInSuperView() //centers horizontally
+myView.centerYInSuperView() //centers vertically
+myView.centerInSuperView() //centers horizontally & vertically
 ```
 Easily rotate views on their axis:
 
@@ -780,6 +840,8 @@ Easily scale images to a certain width:
 let myImageView = UIImageView(x: 80, y: 80, w: 100, h: 100, imageName: "lightsaber")
 myImageView.scaleImageFrameToWidth(width: 20)
 print(myImageView.frame) // (80.0, 80.0, 20.0, 4.59016393442623)
+myImageView.scaleImageFrameToHeight(height: 90)
+print(myImageView.frame) // (80.0, 80.0, 392.14285714, 90.0)       
 ```
 Easily round square images:
 

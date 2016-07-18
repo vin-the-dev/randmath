@@ -14,15 +14,65 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-randmathTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-randmathUITests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SQLite.swift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SwiftFilePath.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SwiftRandom.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>58FFF04367F239C93678CC7DA4F31929</key>
+		<key>07533B9B374BA33053FA554E17A53D93</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F3459F79F48BFA4F1C3077B9F3C8A1C7</key>
+		<key>14AE223BC33B9C0B8DAE7797462BDFBB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>496B3C33499E0B584F94A7EC488DF286</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A0AF94200EC60D3375C1632F53925D1A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DF480E05FBBADCB07F6774745E7844A7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E843A969C5BB33E210CEBF2572A5E697</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FB6DC440E32154A315FFFE6828AEB88A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
