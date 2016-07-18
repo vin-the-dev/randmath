@@ -60,13 +60,14 @@ class ViewController: UIViewController {
     }
     
     @IBAction func enterButtonTapped(sender: AnyObject) {
-        print(_lblAnswer.text)
-        let givenAnswer = _lblAnswer.text!.trim()
+        
+        let givenAnswer = _lblAnswer.text!.toInt()
         
         var message = ""
         
         if givenAnswer == expectedAnswer {
             message = "Correct"
+            getNewQuestion()
         }
         else{
             message = "Wrong"
@@ -83,24 +84,32 @@ class ViewController: UIViewController {
         
         self.presentViewController(alertController, animated: true, completion: nil)
         
+        _lblAnswer.text = " "
     }
     
     // MARK: Functions
     func getNewQuestion(){
         
         questionValue = Int.random(1, 3)
-        firstNumber = Int.random(0, 99)
-        secondNumber = Int.random(0, 99)
         
         switch questionValue {
         case 1: // Addition
+            
             _lblEquation.text = "+"
+            
+            firstNumber = Int.random(0, 99)
+            secondNumber = Int.random(0, 99)
+            
             _lblFirstNumber.text = firstNumber.description
             _lblSecondNumber.text = secondNumber.description
             expectedAnswer = firstNumber + secondNumber
             break
         case 2: // Subtraction
             _lblEquation.text = "-"
+            
+            firstNumber = Int.random(0, 99)
+            secondNumber = Int.random(0, 99)
+            
             if firstNumber > secondNumber {
                 _lblFirstNumber.text = firstNumber.description
                 _lblSecondNumber.text = secondNumber.description
@@ -114,6 +123,10 @@ class ViewController: UIViewController {
             break
         case 3: // Multiplication
             _lblEquation.text = "x"
+            
+            firstNumber = Int.random(0, 99)
+            secondNumber = Int.random(0, 9)
+            
             _lblFirstNumber.text = firstNumber.description
             _lblSecondNumber.text = secondNumber.description
             expectedAnswer = firstNumber * secondNumber
