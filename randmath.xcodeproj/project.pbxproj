@@ -635,7 +635,7 @@
 			baseConfigurationReference = 0D559CF9DC551E4E4D1F0224 /* Pods-randmath.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Vineeth Vijayan (MG846QETA2)";
 				INFOPLIST_FILE = randmath/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.creativelogics.randmath;
@@ -649,7 +649,7 @@
 			baseConfigurationReference = A5DCEEF682F27686D9961AA3 /* Pods-randmath.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Vineeth Vijayan (MG846QETA2)";
 				INFOPLIST_FILE = randmath/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.creativelogics.randmath;
