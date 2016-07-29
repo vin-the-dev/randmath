@@ -142,31 +142,24 @@ class ViewController: UIViewController {
     }
     
     func scheduleLocal() {
-//        let notification = UILocalNotification()
-//        notification.fireDate = NSDate(timeIntervalSinceNow: 50)
-//        notification.alertBody = "Hey you! Yeah you! Swipe to unlock!"
-//        notification.alertAction = "be awesome!"
-//        notification.soundName = UILocalNotificationDefaultSoundName
-//        notification.userInfo = ["CustomField1": "w00t"]
-//        UIApplication.sharedApplication().scheduleLocalNotification(notification)
+        
+        print(Randoms.randomDateWithinDaysBeforeToday(1))
         
         let now: NSDateComponents = NSCalendar.currentCalendar().components([.Hour, .Minute], fromDate: NSDate())
         
         let cal = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)!
         let date = cal.dateBySettingHour(now.hour, minute: now.minute + 1, second: 0, ofDate: NSDate(), options: NSCalendarOptions())
-        let reminder = UILocalNotification()
-        reminder.fireDate = date
-        reminder.alertBody = _lblFirstNumber.text! + _lblEquation.text! + _lblSecondNumber.text!
-        reminder.alertAction = "Cool"
-        reminder.soundName = "sound.aif"
-        reminder.category = "CATEGORY_ID"
         
-        UIApplication.sharedApplication().scheduleLocalNotification(reminder)
+        let sound = "sound.aif"
+        let category = "CATEGORY_ID"
         
         print("Firing at \(now.hour):\(now.minute+1)")
         
         NSUserDefaults.standardUserDefaults().setObject(expectedAnswer, forKey: "expectedAnswerKey")
         
+        let strMessage = _lblFirstNumber.text! + _lblEquation.text! + _lblSecondNumber.text!
+        
+        scheduleLocalNotification(strMessage, date: date!, sound: sound, category: category)
     }
 
 }

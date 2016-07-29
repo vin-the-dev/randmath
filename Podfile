@@ -8,6 +8,8 @@ pod 'EZSwiftExtensions'
 pod 'SQLite.swift', '~> 0.10.1'
 pod 'SwiftRandom'
 pod 'SwiftFilePath'
+pod 'AFDateHelper'
+pod 'Firebase'
 end
 
 target 'randmathTests' do
