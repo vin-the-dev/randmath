@@ -26,6 +26,7 @@ DEPENDENCIES:
   - AFDateHelper
   - EZSwiftExtensions
   - Firebase
+  - Firebase/Core
   - SQLite.swift (~> 0.10.1)
   - SwiftFilePath
   - SwiftRandom
@@ -43,6 +44,6 @@ SPEC CHECKSUMS:
   SwiftFilePath: 52c1db61018e0a3941191eb71002cb5cbdaa39e7
   SwiftRandom: a03b68cbcda1b03d0fef5a1b87296f9500b6eac3
 
-PODFILE CHECKSUM: 0eedfc2744ea43f742f87b7cf81a08979a2499f1
+PODFILE CHECKSUM: a2f6b637669cfea4a08da1b28745a8ae4a993fce
 
 COCOAPODS: 1.0.0.beta.8
