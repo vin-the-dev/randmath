@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		364EE31E1D4BE503003852DC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 364EE31D1D4BE503003852DC /* GoogleService-Info.plist */; };
-		364EE31F1D4BE503003852DC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 364EE31D1D4BE503003852DC /* GoogleService-Info.plist */; };
-		364EE3201D4BE503003852DC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 364EE31D1D4BE503003852DC /* GoogleService-Info.plist */; };
 		365826A11CC2046D0007D1DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365826A01CC2046D0007D1DB /* AppDelegate.swift */; };
 		365826A31CC2046D0007D1DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365826A21CC2046D0007D1DB /* ViewController.swift */; };
 		365826A61CC2046D0007D1DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 365826A41CC2046D0007D1DB /* Main.storyboard */; };
@@ -18,6 +15,7 @@
 		365826B61CC2046D0007D1DB /* randmathTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365826B51CC2046D0007D1DB /* randmathTests.swift */; };
 		365826C11CC2046D0007D1DB /* randmathUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365826C01CC2046D0007D1DB /* randmathUITests.swift */; };
 		368733E51D4293C90028364D /* LocalNotificationClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368733E41D4293C90028364D /* LocalNotificationClass.swift */; };
+		36921CCD1D5083AD0079413E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 36921CCC1D5083AD0079413E /* GoogleService-Info.plist */; };
 		369DD6571CCEAD490020C88B /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369DD6561CCEAD490020C88B /* DataManager.swift */; };
 		36C41F1D1CC22334000D71C7 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C41F1C1CC22334000D71C7 /* SnapshotHelper.swift */; };
 		36C41F1F1CC22C1B000D71C7 /* CommonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C41F1E1CC22C1B000D71C7 /* CommonExtension.swift */; };
@@ -47,7 +45,6 @@
 
 /* Begin PBXFileReference section */
 		0D559CF9DC551E4E4D1F0224 /* Pods-randmath.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-randmath.debug.xcconfig"; path = "Pods/Target Support Files/Pods-randmath/Pods-randmath.debug.xcconfig"; sourceTree = "<group>"; };
-		364EE31D1D4BE503003852DC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3658269D1CC2046C0007D1DB /* randmath.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = randmath.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		365826A01CC2046D0007D1DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		365826A21CC2046D0007D1DB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +59,7 @@
 		365826C01CC2046D0007D1DB /* randmathUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = randmathUITests.swift; sourceTree = "<group>"; };
 		365826C21CC2046D0007D1DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		368733E41D4293C90028364D /* LocalNotificationClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalNotificationClass.swift; sourceTree = "<group>"; };
+		36921CCC1D5083AD0079413E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		369DD6561CCEAD490020C88B /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataManager.swift; path = CommonObjects/DataManager.swift; sourceTree = "<group>"; };
 		36C41F1C1CC22334000D71C7 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = "<group>"; };
 		36C41F1E1CC22C1B000D71C7 /* CommonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonExtension.swift; sourceTree = "<group>"; };
@@ -143,11 +141,11 @@
 		3658269F1CC2046C0007D1DB /* randmath */ = {
 			isa = PBXGroup;
 			children = (
-				364EE31D1D4BE503003852DC /* GoogleService-Info.plist */,
 				36DA43DD1CFB23B500F738DC /* Classes */,
 				369DD6551CCEAB750020C88B /* CommonObjects */,
 				36E59F631CCB94D500897223 /* Model */,
 				36C41F181CC20D89000D71C7 /* Resources */,
+				36921CCC1D5083AD0079413E /* GoogleService-Info.plist */,
 				365826A01CC2046D0007D1DB /* AppDelegate.swift */,
 				365826A21CC2046D0007D1DB /* ViewController.swift */,
 				365826A41CC2046D0007D1DB /* Main.storyboard */,
@@ -348,7 +346,7 @@
 			files = (
 				36E59F651CCB956800897223 /* RockSalt.ttf in Resources */,
 				365826AB1CC2046D0007D1DB /* LaunchScreen.storyboard in Resources */,
-				364EE31E1D4BE503003852DC /* GoogleService-Info.plist in Resources */,
+				36921CCD1D5083AD0079413E /* GoogleService-Info.plist in Resources */,
 				365826A81CC2046D0007D1DB /* Assets.xcassets in Resources */,
 				365826A61CC2046D0007D1DB /* Main.storyboard in Resources */,
 			);
@@ -358,7 +356,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				364EE31F1D4BE503003852DC /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,7 +363,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				364EE3201D4BE503003852DC /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
